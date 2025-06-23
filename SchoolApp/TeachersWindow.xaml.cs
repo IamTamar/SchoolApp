@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BAL;
+using entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,12 +21,22 @@ namespace SchoolApp
     /// </summary>
     public partial class TeachersWindow : Window
     {
+        IEnumerable<Teacher> teachers;
+
         public TeachersWindow()
         {
-            DataContext = this;
-            //bl = new bl;
-            //Teachers = bl.GetTeachers();
             InitializeComponent();
+            DataContext = this;
+            var bal = new functions();
+            var all = bal.readAllTeachers();
+
+            teachers = all.ToList();
+            grid.ItemsSource = teachers;
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
         //public List<Teacher> Teachers { get; set; }
     }

@@ -25,7 +25,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
         </Grid>
-        <DataGrid Grid.Row="2" Grid.Column="1" ItemsSource="{Binding Teachers}">
+        <DataGrid x:Name="grid" Grid.Row="2" Grid.Column="1" ItemsSource="{Binding Teachers}" SelectionChanged="DataGrid_SelectionChanged">
         </DataGrid>
  </Grid>
 </Window>

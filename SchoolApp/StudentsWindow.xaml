@@ -26,10 +26,10 @@
             </Grid.ColumnDefinitions>
             <WrapPanel>
                 <TextBlock Margin="20" FontSize="20">Class</TextBlock>
-                <ComboBox Margin="20" FontSize="20" Width="100" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></ComboBox>
+                <ComboBox Name="classesButton" Margin="20" FontSize="20" Width="100" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
             </WrapPanel>
         </Grid>
-        <DataGrid Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding Students}">
+        <DataGrid x:Name="grid" Grid.Row="2" Grid.Column="1"  ItemsSource="{Binding Students}" SelectionChanged="DataGrid_SelectionChanged">
 
     </DataGrid>
     </Grid>

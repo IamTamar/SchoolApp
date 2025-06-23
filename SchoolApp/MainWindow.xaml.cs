@@ -30,5 +30,10 @@ namespace SchoolApp
             TeachersWindow teacherWindow = new TeachersWindow();
             teacherWindow.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
