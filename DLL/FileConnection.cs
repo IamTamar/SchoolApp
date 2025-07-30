@@ -28,14 +28,14 @@ namespace DLL
             return reader;
 
         }
-        public void XMLRead(string xmlPath) {
-            MySettings settings = new MySettings();
-            string path = "MySettings.xml";
-            XmlSerializer x = new XmlSerializer(typeof(MySettings));
-            StreamReader reader = new StreamReader(path);
-            settings = (TVSettings)x.Deserialize(reader);
+        //public void XMLRead(string xmlPath) {
+        //    MySettings settings = new MySettings();
+        //    string path = "MySettings.xml";
+        //    XmlSerializer x = new XmlSerializer(typeof(MySettings));
+        //    StreamReader reader = new StreamReader(path);
+        //    settings = (TVSettings)x.Deserialize(reader);
 
-        }
+        //}
     }
 }
  
